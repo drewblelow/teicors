@@ -1,0 +1,41 @@
+div.row{
+    width: 100%;
+}
+
+div.navbar-container{
+    height: 100px;
+}
+
+span.navbar-logo-container{
+    float: left;
+}
+
+span.navbar-link-container{
+    border: 1px solid;
+    border-color: #2367d3;
+    border-radius: 5px;
+    float: right;
+    background-color: #2367d3;
+    height: 30%;
+}
+
+a.navbar-links{
+    text-decoration: none;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: white;
+    font-size: 17px;
+}
+
+div.banner-container{
+    background-image: url("../assets/img/banner.png");
+    background-size: cover;
+    height: 100px;
+    border-radius: 5px;
+}
+
+h1.banner-header{
+    padding-left: 30px;
+    line-height: 95px;
+    color: #ffffff;
+}

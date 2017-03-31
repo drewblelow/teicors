@@ -3,6 +3,7 @@
 function renderTopNav(parentId){
     var parentDiv = document.getElementById(parentId);
     parentDiv.className = "navbar-container";
+    parentDiv.width = "100%";
 
     var logoDiv = document.createElement("span");
     logoDiv.className = "navbar-logo-container";
@@ -57,6 +58,7 @@ function renderTopNav(parentId){
 function renderBanner(parentId, bannerText){
     var parentDiv = document.getElementById(parentId);
     parentDiv.className = "banner-container";
+    parentDiv.width = "100%";
 
     var bannerTextHeader = document.createElement("h1");
     bannerTextHeader.className = "banner-header";

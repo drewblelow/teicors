@@ -121,3 +121,76 @@ dragDrop = {
         dragDrop.draggedObject = null;
 	}
 }
+
+function dragToMove(endX, endY, image){
+    var boardSize = parseInt(board.size());
+    var squareSize = 400 / boardSize;
+    var squareCenterOffset = squareSize / 2;
+    var id = image.id;
+    var numEndX = parseInt(endX.replace("px", ""));
+    var numEndY = parseInt(endY.replace("px", ""));
+    var adjustedX = numEndX + squareCenterOffset;
+    var adjustedY = numEndY + squareCenterOffset;
+    var oldXCoord = id.split("+")[0];
+    var oldYCoord = id.split("+")[1];
+    if (adjustedX >= 0 && adjustedX <= 400 && adjustedY >= 0 && adjustedY <= 400){
+        // perform validation check if center of image is within the 400x400
+        var newYCoord = Math.floor(adjustedX / squareSize); //due to inverted canvas coord
+        var newXCoord = Math.floor(adjustedY / squareSize);
+        var imgSrc = image.src;
+        var direction;
+        var checker = board.square[oldXCoord][oldYCoord];
+
+        if (imgSrc.includes("black"))
+            direction = -1;
+        else if (imgSrc.includes("red"))
+            direction = 1;
+        else
+            return; //invalid img
+
+        var result = rules.makeMovement(checker, direction, direction, newXCoord, newYCoord);
+
+        if (result != null){
+            toggleTurn();
+            if (!isGameOver){
+                clearTimer();
+                startTimer(1000);
+            }
+        } else {
+            var canvasContainer = document.getElementById("board_container");
+            var imgNew = document.createElement("IMG");
+            imgNew.src = image.src;
+            imgNew.className = image.className;
+            imgNew.height = image.height;
+            imgNew.width = image.width;
+            imgNew.style.left = (oldYCoord * squareSize).toString() + "px";
+            imgNew.style.top = (oldXCoord * squareSize).toString() + "px";
+            canvasContainer.removeChild(image);
+            imgNew.id = id;
+            canvasContainer.appendChild(imgNew);
+            dragDrop.initElement(document.getElementById(id));
+            if (!document.getElementById("btnStartGame").disabled){
+                document.getElementById("btnStartGame").disabled = true;
+                clearTimer();
+                startTimer(1000);
+            }
+        }
+    } else {
+        var canvasContainer = document.getElementById("board_container");
+        var imgNew = document.createElement("IMG");
+        imgNew.src = image.src;
+        imgNew.className = image.className;
+        imgNew.height = image.height;
+        imgNew.width = image.width;
+        imgNew.style.left = (oldYCoord * squareSize).toString() + "px";
+        imgNew.style.top = (oldXCoord * squareSize).toString() + "px";
+        canvasContainer.removeChild(image);
+        imgNew.id = id;
+        canvasContainer.appendChild(imgNew);
+        if (!document.getElementById("btnStartGame").disabled){
+            document.getElementById("btnStartGame").disabled = true;
+            clearTimer();
+            startTimer(1000);
+        }
+    }
+}

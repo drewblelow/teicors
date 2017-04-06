@@ -35,3 +35,16 @@ h1.banner-header{
     line-height: 95px;
     color: #ffffff;
 }
+
+div.footer-container{
+    background-image: url("../assets/img/banner.png");
+    background-size: cover;
+    height: 100px;
+    border-radius: 5px;
+}
+
+h2.footer-text{
+    padding-left: 30px;
+    line-height: 95px;
+    color: #ffffff;
+}

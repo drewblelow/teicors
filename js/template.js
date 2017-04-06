@@ -66,3 +66,15 @@ function renderBanner(parentId, bannerText){
 
     parentDiv.appendChild(bannerTextHeader);
 }
+
+function renderFooter(parentId){
+    var parentDiv = document.getElementById(parentId);
+    parentDiv.className = "footer-container";
+    parentDiv.width = "100%";
+
+    var footerText = document.createElement("h2");
+    footerText.className = "footer-text";
+    footerText.innerHTML = "The enhanced interface for CORS: an NUS project";
+
+    parentDiv.appendChild(footerText);
+}

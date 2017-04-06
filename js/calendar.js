@@ -1,4 +1,4 @@
-function renderCalendar(parentId){
+function renderCalendar(parentId, gridId){
     var start = 8;
     var end = 22;
     var numDays = 5;
@@ -52,6 +52,7 @@ function renderCalendar(parentId){
 
     var grid = document.createElement("div");
     grid.className = "calendar-grid-container";
+    grid.id = gridId;
     for (var i=0; i<numDays; i++){
         var row = document.createElement("div");
         row.className = "calendar-grid-row";

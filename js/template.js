@@ -9,50 +9,118 @@ function renderTopNav(parentId){
     logoDiv.className = "navbar-logo-container";
     var logoImage = document.createElement('img');
     logoImage.src = "../assets/img/partylion.png";
-    logoImage.width = "213";
-    logoImage.height = "98";
+    
+    var mq = window.matchMedia("(min-width: 500px)");
+    
+    if(mq.matches) {
+        logoImage.width = "213";
+        logoImage.height = "98";    
+    } else {
+        logoImage.width = "185";
+        logoImage.height = "75";
+    }
     logoDiv.appendChild(logoImage);
+    
+    console.log(mq);
+    if(mq.matches) {
+        var navbarDiv = document.createElement("span");
+        navbarDiv.className = "navbar-link-container";
+    
+        var homeLink = document.createElement("a");
+        homeLink.href = "../docs/index.html";
+        homeLink.text = "Home";
+        homeLink.className = "navbar-links";
+        navbarDiv.appendChild(homeLink);
 
-    var navbarDiv = document.createElement("span");
-    navbarDiv.className = "navbar-link-container";
-    var homeLink = document.createElement("a");
-    homeLink.href = "../docs/index.html";
-    homeLink.text = "Home";
-    homeLink.className = "navbar-links";
-    navbarDiv.appendChild(homeLink);
+        var manageModuleLink = document.createElement("a");
+        manageModuleLink.href = "";
+        manageModuleLink.text = "Manage Modules";
+        manageModuleLink.className = "navbar-links";
+        navbarDiv.appendChild(manageModuleLink);
+        
+        var moduleBiddingLink = document.createElement("a");
+        moduleBiddingLink.href = "";
+        moduleBiddingLink.text = "Module Bidding";
+        moduleBiddingLink.className = "navbar-links";
+        navbarDiv.appendChild(moduleBiddingLink);
 
-    var manageModuleLink = document.createElement("a");
-    manageModuleLink.href = "";
-    manageModuleLink.text = "Manage Modules";
-    manageModuleLink.className = "navbar-links";
-    navbarDiv.appendChild(manageModuleLink);
+        var nusBidPointsLink = document.createElement("a");
+        nusBidPointsLink.href = "";
+        nusBidPointsLink.text = "NUS Bid Points";
+        nusBidPointsLink.className = "navbar-links";
+        navbarDiv.appendChild(nusBidPointsLink);
+        
+        var tutRegLink = document.createElement("a");
+        tutRegLink.href = "";
+        tutRegLink.text = "Tutorial Registration";
+        tutRegLink.className = "navbar-links";
+        navbarDiv.appendChild(tutRegLink);
 
-    var moduleBiddingLink = document.createElement("a");
-    moduleBiddingLink.href = "";
-    moduleBiddingLink.text = "Module Bidding";
-    moduleBiddingLink.className = "navbar-links";
-    navbarDiv.appendChild(moduleBiddingLink);
+        var appealLink = document.createElement("a");
+        appealLink.href = "";
+        appealLink.text = "Appeal";
+        appealLink.className = "navbar-links";
+        navbarDiv.appendChild(appealLink);
+        
+        parentDiv.appendChild(logoDiv);
+        parentDiv.appendChild(navbarDiv);
+    } else {
+        var buttonDiv = document.createElement("div");
+        buttonDiv.className = "dropdown";
+        
+        var button = document.createElement("BUTTON");
+        button.className = "ddbtn";
+        var buttonText = document.createTextNode("Menu");
+        buttonText.className = "btnText";
+        button.appendChild(buttonText);
+        buttonDiv.appendChild(button);
+        
+        var menuLinks = document.createElement("div");
+        menuLinks.id = "links";
+        menuLinks.className = "listlinks"
+        
+        var homeLink = document.createElement("a");
+        homeLink.href = "../docs/index.html";
+        homeLink.text = "Home";
+        homeLink.className = "list-links";
+        menuLinks.appendChild(homeLink);
 
-    var nusBidPointsLink = document.createElement("a");
-    nusBidPointsLink.href = "";
-    nusBidPointsLink.text = "NUS Bid Points";
-    nusBidPointsLink.className = "navbar-links";
-    navbarDiv.appendChild(nusBidPointsLink);
+        var manageModuleLink = document.createElement("a");
+        manageModuleLink.href = "";
+        manageModuleLink.text = "Manage Modules";
+        manageModuleLink.className = "list-links";
+        menuLinks.appendChild(manageModuleLink);
+        
+        var moduleBiddingLink = document.createElement("a");
+        moduleBiddingLink.href = "";
+        moduleBiddingLink.text = "Module Bidding";
+        moduleBiddingLink.className = "list-links";
+        menuLinks.appendChild(moduleBiddingLink);
 
-    var tutRegLink = document.createElement("a");
-    tutRegLink.href = "";
-    tutRegLink.text = "Tutorial Registration";
-    tutRegLink.className = "navbar-links";
-    navbarDiv.appendChild(tutRegLink);
+        var nusBidPointsLink = document.createElement("a");
+        nusBidPointsLink.href = "";
+        nusBidPointsLink.text = "NUS Bid Points";
+        nusBidPointsLink.className = "list-links";
+        menuLinks.appendChild(nusBidPointsLink);
+        
+        var tutRegLink = document.createElement("a");
+        tutRegLink.href = "";
+        tutRegLink.text = "Tutorial Registration";
+        tutRegLink.className = "list-links";
+        menuLinks.appendChild(tutRegLink);
 
-    var appealLink = document.createElement("a");
-    appealLink.href = "";
-    appealLink.text = "Appeal";
-    appealLink.className = "navbar-links";
-    navbarDiv.appendChild(appealLink);
-
-    parentDiv.appendChild(logoDiv);
-    parentDiv.appendChild(navbarDiv);
+        var appealLink = document.createElement("a");
+        appealLink.href = "";
+        appealLink.text = "Appeal";
+        appealLink.className = "list-links";
+        menuLinks.appendChild(appealLink);
+        
+        button.onclick = function() { menuLinks.classList.toggle("show"); console.log(menuLinks) };
+        buttonDiv.appendChild(menuLinks);
+        parentDiv.appendChild(logoDiv);
+        parentDiv.appendChild(buttonDiv);
+        
+    }
 }
 
 function renderBanner(parentId, bannerText){
@@ -78,3 +146,4 @@ function renderFooter(parentId){
 
     parentDiv.appendChild(footerText);
 }
+

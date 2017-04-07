@@ -15,6 +15,11 @@ span.navbar-link-container{
     height: 30%;
 }
 
+.navbar-logo-pic {
+    width: 213px;
+    height: 98px;
+}
+
 a.navbar-links{
     text-decoration: none;
     padding-left: 5px;
@@ -31,6 +36,7 @@ div.banner-container{
 }
 
 h1.banner-header{
+    font-family: Georgia;
     padding-left: 30px;
     line-height: 95px;
     color: #ffffff;
@@ -44,40 +50,41 @@ div.footer-container{
 }
 
 h2.footer-text{
+    font-family: Georgia;
     padding-left: 30px;
     line-height: 95px;
     color: #ffffff;
 }
 
+.dropdown {
+    display: none;
+}
 
-@media (max-width: 500px) {
-    
-    span.navbar-logo-container {
-        float: left;
-        margin-top: 5%;
-        margin-left: 10%;
+@media (max-width: 860px) {
+    span.navbar-link-container {
+        display:none;
     }
     
     .ddbtn {
-        height: 75px;
-        width: 75px;
-        background-color: whitesmoke;
+        height: 100px;
+        width: 100px;
+        background: url('../assets/img/blue_burger.png');
+        background-size: cover;
         font-family: Georgia;
         font-weight: bolder;
+        border-style: none;
     }
     
     .dropdown {
         display: inline-block;
         float: right;
-        margin-right: 7.5%;
-        margin-top: 5%;
     }
     
     .listlinks {
         display: none;
         position: absolute;
         background-color: #f9f9f9;
-        right: 7.5%;
+        right: 0%;
         min-width: 150px;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         z-index: 1;
@@ -87,27 +94,67 @@ h2.footer-text{
         color: black;
         padding: 12px 10px;
         display: block;
+        text-decoration: none;
     }
     
     .show {
         display:block;
     }
     
+}
+
+
+@media (max-width: 500px) {
+    
+    .ddbtn {
+        height: 75px;
+        width: 75px;
+        background: url('../assets/img/blue_burger.png');
+        background-size: cover;
+        font-family: Georgia;
+        font-weight: bolder;
+        border-style: none;
+    }
+    
+    span.navbar-logo-container {
+        float: left;
+        margin-top: 2.5%;
+        margin-left: 2.5%;
+    }
+    
+    span.navbar-link-container {
+        display: none;
+    }
+    
+    .navbar-logo-pic {
+        width: 170px;
+        height: 75px;
+    }
+    
+
     div.banner-container{
         background-image: url("../assets/img/banner.png");
         background-size: cover;
         height: 50px;
         border-radius: 5px;
-        padding-left: 10px;
+        text-align: center;
     }
 
     h1.banner-header{
-        line-height: 1;
-        padding-top: 5%;
-        font-size: 11.5px;
-        font-family: Georgia;
+        padding-left: 0;
+        line-height: 50px;
+        font-size: 12.5px;
         color: #ffffff;
-        font-weight: bolder;
+    }
+    
+    div.footer-container {
+        height: 35px;
+    }
+    
+    h2.footer-text{
+        line-height: 35px;
+        font-size: 10px;
+        color: #ffffff;
     }
 
 }

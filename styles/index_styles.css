@@ -1,0 +1,45 @@
+.content-container-welcome {
+    font-family: Georgia;
+    font-weight: bolder;
+}
+
+.content-container-verify {
+    font-family: Georgia;
+    font-weight: bold;
+}
+
+.content-container-personaldata {
+    font-family: Georgia;
+}
+
+.content-container-help {
+    font-family: Georgia;
+}
+
+.content-container-info {
+    font-family: Georgia;
+}
+
+@media (max-width: 500px) {
+
+    .content-container-verify {
+        padding-top: 5%;
+        padding-left: 5%;
+        font-size: 15.5px;
+    }
+
+    .content-container-personaldata {
+        padding-top: 2.5%;
+        padding-left: 10%;
+        font-size: 14.5px;
+    }
+
+    .content-container-help {
+        padding-top: 20%;
+        font-size: 10.5px;
+    }
+
+    .content-container-info {
+        font-size: 10.5px;
+    }
+}

@@ -230,14 +230,12 @@ function moveModule(originalModule){
     var modCode = originalModule.id;
     var adjustedX = 20 + parseInt(originalModule.style.top.replace("px", ""));
     var adjustedY = 40 + parseInt(originalModule.style.left.replace("px", ""));
-    console.log(adjustedX + "," + adjustedY);
     var info = modCode.split("_");
     var modCodeRaw = info[0];
     var oldOffsetX = info[1];
     var oldOffsetY = info[2];
 
     if (adjustedX < 0 || adjustedY < 0 || adjustedX > 400 || adjustedY > 1200){
-        console.log("wat");
         originalModule.style.top = (oldOffsetX * 80).toString() + "px";
         originalModule.style.left = (oldOffsetY * 80).toString() + "px";
     } else {
@@ -247,6 +245,5 @@ function moveModule(originalModule){
         originalModule.style.top = (numOffsetX * 80).toString() + "px";
         originalModule.style.left = (numOffsetY * 80).toString() + "px";
         originalModule.id = newId;
-        console.log("qwe");
     }
 }

@@ -4,7 +4,16 @@ function renderContent(parentId) {
     parentDiv.className = "content-container";
     parentDiv.width = "100%";
     
-    //Welcome: blah blah
+    //Name & Matric
+    var namematDiv = document.createElement("P");
+    namematDiv.className = "content-container-namemat";
+    
+    var namematText = document.createTextNode("JUAN LOPEZ(A0101010B)")
+    namematDiv.appendChild(namematText);
+    
+    parentDiv.appendChild(namematDiv);
+    
+    //Welcome
     var welcomeDiv = document.createElement("h2");
     welcomeDiv.className = "content-container-welcome";
     

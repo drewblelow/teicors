@@ -22,7 +22,7 @@ function renderTopNav(parentId){
     navbarDiv.appendChild(homeLink);
 
     var manageModuleLink = document.createElement("a");
-    manageModuleLink.href = "";
+    manageModuleLink.href = "../docs/modulemanagement.html";
     manageModuleLink.text = "Manage Modules";
     manageModuleLink.className = "navbar-links";
     navbarDiv.appendChild(manageModuleLink);
@@ -69,7 +69,7 @@ function renderTopNav(parentId){
     menuLinks.appendChild(homeLinkB);
 
     var manageModuleLinkB = document.createElement("a");
-    manageModuleLinkB.href = "";
+    manageModuleLinkB.href = "../docs/modulemanagement.html";
     manageModuleLinkB.text = "Manage Modules";
     manageModuleLinkB.className = "navbar-button-links";
     menuLinks.appendChild(manageModuleLinkB);

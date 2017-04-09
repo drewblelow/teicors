@@ -12,21 +12,41 @@
 
 .cmtext {
     margin-top: 2%;
-    font-size: 25px;
+    font-size: 28px;
     font-weight: bold;
 }
 
 .modulestable {
-    margin-top: 2%;
+    margin-top: 3%;
+    border: solid;
+    border-width: thin;
 }
 
 .hidetimetablebutton {
     display: none;
 }
 
+th, td {
+    border: solid;
+    border-width: thin;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+
+th {
+    font-size: 20px;
+}
+
+td {
+    font-size: 18.5px;
+}
+
 .searchbar {
     margin-top:2%;
     margin-left: 50px;
+    height: 35px;
     width: 300px;
     float: left;
     clear: left;
@@ -54,7 +74,6 @@
     opacity: 50%;
     text-decoration: none;
     line-height: 20px;
-    font-weight: bold;
     background-color: gainsboro;
     border: solid;
     border-width: 2px
@@ -132,18 +151,16 @@
         font-family: sans-serif;
         color: black;
         height: auto;
-        min-width: 350px;
-        max-width: 350px;
+        min-width: 300px;
+        max-width: 300px;
         display: block;
         float: left;
         clear: left;
-        opacity: 50%;
         text-decoration: none;
         line-height: 20px;
-        font-weight: bold;
-        background-color: gainsboro;
+        background-color: azure;
         border: solid;
-        border-width: 2px
+        border-width: thin;
     }
 
     .addbutton {

@@ -230,10 +230,11 @@ function renderContent(parentId) {
     searchbar.setAttribute("type", "search");
     searchbar.onkeyup = function() {
         for(i = 0; i < searchbar.value.length; i++) {
+            var search = searchbar.value.toUpperCase();
             module1.style.display = "none";
             module2.style.display = "none";
             module3.style.display = "none";
-            if(module1.text.indexOf(searchbar.value) !== -1) {
+            if(module1.text.toUpperCase().indexOf(search) !== -1) {
                 modules.style.display = "";
                 modulesli.style.display = "";
                 module1.style.display = "";
@@ -243,7 +244,7 @@ function renderContent(parentId) {
                     module1.style.display = "none";
                 }
             }
-            if(module2.text.indexOf(searchbar.value) !== -1) {
+            if(module2.text.toUpperCase().indexOf(search) !== -1) {
                 modules.style.display = "";
                 modulesli.style.display = "";
                 module2.style.display = "";
@@ -253,7 +254,7 @@ function renderContent(parentId) {
                     module2.style.display = "none";
                 }
             }
-            if(module3.text.indexOf(searchbar.value) !== -1) {
+            if(module3.text.toUpperCase().indexOf(search) !== -1) {
                 modules.style.display = "";
                 modulesli.style.display = "";
                 module3.style.display = "";

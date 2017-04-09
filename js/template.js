@@ -28,7 +28,7 @@ function renderTopNav(parentId){
     navbarDiv.appendChild(manageModuleLink);
         
     var moduleBiddingLink = document.createElement("a");
-    moduleBiddingLink.href = "";
+    moduleBiddingLink.href = "../docs/modulebidding.html";
     moduleBiddingLink.text = "Module Bidding";
     moduleBiddingLink.className = "navbar-links";
     navbarDiv.appendChild(moduleBiddingLink);
@@ -75,7 +75,7 @@ function renderTopNav(parentId){
     menuLinks.appendChild(manageModuleLinkB);
         
     var moduleBiddingLinkB = document.createElement("a");
-    moduleBiddingLinkB.href = "";
+    moduleBiddingLinkB.href = "../docs/modulebidding.html";
     moduleBiddingLinkB.text = "Module Bidding";
     moduleBiddingLinkB.className = "navbar-button-links";
     menuLinks.appendChild(moduleBiddingLinkB);

@@ -1,0 +1,121 @@
+.content-particulars {
+    margin-top: 1%;
+    font-size: 20px;
+}
+
+#dragdrop-calendar-container {
+}
+
+.points-container {
+    margin-top: 2.5%;
+    width: 100%;
+    align-content: center;
+}
+
+.points-table {
+    align-content: center;
+    margin:auto;
+}
+
+.points-table th{
+    border: none;
+}
+.currentbidpoints {
+    width: 33.3%;
+    font-size: 30px;
+}
+
+.programmebidpoints {
+    width: 33.3%;
+    font-size: 30px;
+}
+
+.generalbidpoints {
+    width: 33.3%;
+    font-size: 30px;
+}
+
+#timetablebutton-container {
+}
+
+.hidetimetablebutton {
+    margin-left: 30px;
+    font-size: 15px;
+}
+
+.tablelabel {
+    font-family: sans-serif;
+    font-size: 35px;
+}
+
+th, td { 
+    vertical-align: middle;
+    text-align: center;
+}
+
+.availabletable {
+    border-style: solid;
+    border-width: 3px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.futuretable {
+    border-style: solid;
+    border-width: 3px;
+    font-size: 20px;
+    text-align: center;
+}
+
+td, th{ border: 1px solid; }
+tr + tr { border: 1px solid; }
+
+.mymodulestable {
+    border-style: solid;
+    border-width: 3px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.mymodulestables.th {
+    font-size: 20px;
+}
+
+@media (max-width: 500px) {
+    .content-particulars {
+        font-size: 15px;
+    }    
+    .currentbidpoints {
+        font-size: 17.5px;
+    }
+
+    .programmebidpoints {
+        font-size: 20px;
+    }
+
+    .generalbidpoints {
+        font-size: 20px;
+    }
+    
+    .hidetimetablebutton {
+        font-size: 15px;
+        margin-left: 0%;
+        align-content: center;
+        margin: auto;
+    }
+    
+    #dragdrop-calendar-container {
+        display: none;
+    }
+    
+    .input_field {
+        max-width: 115px;
+    }
+    
+    .tablelabel {
+        font-size: 20px;
+    }
+    td,th{
+        font-size: 15px;
+    }
+}

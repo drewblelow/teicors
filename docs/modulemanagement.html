@@ -4,8 +4,11 @@
         <title>TeiCORS - Module Management</title>
         <link rel="stylesheet" href="../styles/template_styles.css">
         <link rel="stylesheet" href ="../styles/modulemanagement_styles.css">
+        <link rel="stylesheet" href="../styles/calendar_styles.css">
         <script src="../js/template.js"></script>
+        <script src="../js/calendar.js"></script>
         <script src="../js/modulemanagement.js"></script>
+        
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
@@ -19,6 +22,17 @@
         <div class="row">
             <div id="home-banner">
                 <script>renderBanner("home-banner", "Module Management");</script>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div id="home-user">
+                <script>renderParticulars("home-user");</script>
+            </div>
+        
+        <div class="row">
+            <div id="dragdrop-calendar-container">
+                <script>renderCalendar("dragdrop-calendar-container", "calendar");</script>
             </div>
         </div>
         

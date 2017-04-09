@@ -1,0 +1,171 @@
+.content-particulars {
+    margin-top: 1%;
+    font-size: 20px;
+}
+
+.content-container-currentmodule {
+    float: left;
+    clear: left;
+    padding-left: 50px;
+    display: block;
+}
+
+.cmtext {
+    margin-top: 2%;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.modulestable {
+    margin-top: 2%;
+}
+
+.hidetimetablebutton {
+    display: none;
+}
+
+.searchbar {
+    margin-top:2%;
+    margin-left: 50px;
+    width: 300px;
+    float: left;
+    clear: left;
+    display: block;
+}
+
+.moduleslist {
+    display: block;
+    position: relative;
+    right: 0%;
+    min-width: 150px;
+    min-height = 150px;
+    margin-left: 50px;
+}
+
+.modules a {
+    font-family: sans-serif;
+    color: black;
+    height: auto;
+    min-width: 350px;
+    max-width: 350px;
+    display: block;
+    float: left;
+    clear: left;
+    opacity: 50%;
+    text-decoration: none;
+    line-height: 20px;
+    font-weight: bold;
+    background-color: gainsboro;
+    border: solid;
+    border-width: 2px
+}
+
+.addbutton {
+    margin-top: 5px;
+    margin-left: 50px;
+    clear: left;
+    float: left;
+}
+
+.addedmodule {
+    clear: left;
+    display: block;
+}
+
+.modulebiddingbutton {
+    float: left;
+    clear: left;
+    margin-top: 5%;
+    margin-left: 50px;
+    height: 50px;
+    display: block;
+}
+
+.footer {
+    margin-top: 350px;
+}
+
+@media (max-width: 500px) {
+    
+    .content-particulars {
+        margin-top: 1%;
+        font-size: 15px;
+    }
+    
+    #dragdrop-calendar-container {
+        display: none;
+    }
+    
+    .hidetimetablebutton {
+        margin-top: 2%;
+        display: block;
+    }
+    
+    .content-container-currentmodule {
+        padding-left: 0px;
+        float: left;
+        clear: left;
+        display: block;
+    }
+    
+    .cmtext {
+        font-size: 18.5px;
+        margin-left: 0%;
+    }
+
+    .modulestable {
+        margin-top: 2%;
+        font-size: 15px;
+        margin-left: 0%;
+    }
+
+    .searchbar {
+        margin-top:2%;
+        margin-left: 0%;
+    }
+
+    .moduleslist {
+        margin-left: 0%;
+    }
+
+    .modules a {
+        font-family: sans-serif;
+        color: black;
+        height: auto;
+        min-width: 350px;
+        max-width: 350px;
+        display: block;
+        float: left;
+        clear: left;
+        opacity: 50%;
+        text-decoration: none;
+        line-height: 20px;
+        font-weight: bold;
+        background-color: gainsboro;
+        border: solid;
+        border-width: 2px
+    }
+
+    .addbutton {
+        margin-left: 0px;
+    }
+    
+    .show {
+        display: block;
+    }
+    
+    .footer {
+        margin-top: 350px;
+    }
+    
+    .modulebiddingbutton {
+        float: left;
+        clear: left;
+        margin-top: 5%;
+        margin-left: 0px;
+        height: 50px;
+        display: block;
+    }
+
+    
+}

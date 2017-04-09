@@ -11,10 +11,10 @@ function renderTopNav(parentId){
     logoImage.src = "../assets/img/partylion.png";
     logoImage.className = "navbar-logo-pic";
     logoDiv.appendChild(logoImage);
-    
+
     var navbarDiv = document.createElement("span");
     navbarDiv.className = "navbar-link-container";
-    
+
     var homeLink = document.createElement("a");
     homeLink.href = "../docs/index.html";
     homeLink.text = "Home";
@@ -26,7 +26,7 @@ function renderTopNav(parentId){
     manageModuleLink.text = "Manage Modules";
     manageModuleLink.className = "navbar-links";
     navbarDiv.appendChild(manageModuleLink);
-        
+
     var moduleBiddingLink = document.createElement("a");
     moduleBiddingLink.href = "../docs/modulebidding.html";
     moduleBiddingLink.text = "Module Bidding";
@@ -38,9 +38,9 @@ function renderTopNav(parentId){
     nusBidPointsLink.text = "NUS Bid Points";
     nusBidPointsLink.className = "navbar-links";
     navbarDiv.appendChild(nusBidPointsLink);
-        
+
     var tutRegLink = document.createElement("a");
-    tutRegLink.href = "";
+    tutRegLink.href = "../docs/tutorialregistration.html";
     tutRegLink.text = "Tutorial Registration";
     tutRegLink.className = "navbar-links";
     navbarDiv.appendChild(tutRegLink);
@@ -50,18 +50,18 @@ function renderTopNav(parentId){
     appealLink.text = "Appeal";
     appealLink.className = "navbar-links";
     navbarDiv.appendChild(appealLink);
-    
+
     var buttonDiv = document.createElement("div");
     buttonDiv.className = "dropdown";
-        
+
     var button = document.createElement("BUTTON");
     button.className = "ddbtn";
     buttonDiv.appendChild(button);
-        
+
     var menuLinks = document.createElement("div");
     menuLinks.id = "links";
     menuLinks.className = "listlinks";
-    
+
     var homeLinkB = document.createElement("a");
     homeLinkB.href = "../docs/index.html";
     homeLinkB.text = "Home";
@@ -73,7 +73,7 @@ function renderTopNav(parentId){
     manageModuleLinkB.text = "Manage Modules";
     manageModuleLinkB.className = "navbar-button-links";
     menuLinks.appendChild(manageModuleLinkB);
-        
+
     var moduleBiddingLinkB = document.createElement("a");
     moduleBiddingLinkB.href = "../docs/modulebidding.html";
     moduleBiddingLinkB.text = "Module Bidding";
@@ -85,9 +85,9 @@ function renderTopNav(parentId){
     nusBidPointsLinkB.text = "NUS Bid Points";
     nusBidPointsLinkB.className = "navbar-button-links";
     menuLinks.appendChild(nusBidPointsLinkB);
-        
+
     var tutRegLinkB = document.createElement("a");
-    tutRegLinkB.href = "";
+    tutRegLinkB.href = "../docs/tutorialregistration.html";
     tutRegLinkB.text = "Tutorial Registration";
     tutRegLinkB.className = "navbar-button-links";
     menuLinks.appendChild(tutRegLinkB);
@@ -97,17 +97,17 @@ function renderTopNav(parentId){
     appealLinkB.text = "Appeal";
     appealLinkB.className = "navbar-button-links";
     menuLinks.appendChild(appealLinkB);
-    
+
     buttonDiv.appendChild(menuLinks);
-    button.onclick = function() { 
-        menuLinks.classList.toggle("show"); 
-        console.log(menuLinks) 
+    button.onclick = function() {
+        menuLinks.classList.toggle("show");
+        console.log(menuLinks)
     };
-    
+
     parentDiv.appendChild(logoDiv);
     parentDiv.appendChild(navbarDiv);
     parentDiv.appendChild(buttonDiv);
-        
+
 }
 
 function renderBanner(parentId, bannerText){
@@ -133,4 +133,3 @@ function renderFooter(parentId){
 
     parentDiv.appendChild(footerText);
 }
-

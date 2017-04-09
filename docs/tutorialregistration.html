@@ -1,0 +1,43 @@
+<!doctype HTML>
+<html lang=en>
+    <head>
+        <title>TeiCORS</title>
+        <link rel="stylesheet" href="../styles/template_styles.css">
+        <link rel="stylesheet" href ="../styles/calendar_styles.css">
+        <script src="../js/template.js"></script>
+        <script src="../js/calendar.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <div class="row">
+            <div id="tut-reg-nav">
+                <script>renderTopNav("tut-reg-nav");</script>
+            </div>
+        </div>
+
+        <div class="row">
+            <div id="tut-reg-banner">
+                <script>renderBanner("tut-reg-banner", "Tutorial Registration");</script>
+            </div>
+        </div>
+
+        <div class="row">
+            <div id="tut-reg-calendar">
+                <script>
+                    renderCalendar("tut-reg-calendar", "tut-reg-grid");
+                    addNonDragModule("CS3240LEC", "module-1", "CS3240 LEC1<br>COM B1-03", "#88b0ef", "tut-reg-grid", 4, 10);
+                    addModule("CS3240LAB1", "module-1", "CS3240 LAB1<br>AS6 4-21", "#88b0ef", "tut-reg-grid", 0, 4);
+                    addNonDragModule("NM2213LEC", "module-2", "NM2213 LEC1<br>LT11", "#fcffaa", "tut-reg-grid", 4, 2);
+                </script>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div id="tut-reg-footer">
+                <script>renderFooter("tut-reg-footer");</script>
+            </div>
+        </div>
+
+    </body>
+<html>

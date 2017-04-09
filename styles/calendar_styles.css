@@ -47,15 +47,18 @@ div.calendar-grid-cell{
 }
 
 div.module-node{
-    height: 40px;
-    width: 80px;
-    border-radius: 5px;
+    height: 38px;
+    width: 78px;
+    border-radius: 7px;
     position: absolute;
+    border: 1px solid;
+    font-size: 12px;
 }
 
 div.module-node-nodrag{
-    height: 40px;
-    width: 80px;
+    height: 38px;
+    width: 78px;
     position: absolute;
-    
+    border: 1px solid;
+    font-size: 12px;
 }

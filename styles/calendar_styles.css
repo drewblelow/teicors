@@ -25,13 +25,12 @@ div.calendar-day{
     text-align: left;
     font-weight: bold;
     height: 80px;
-    width: 80px;
     line-height: 80px;
 }
 
 div.calendar-grid-container{
-    float: left;
-    width: 1200px;
+    float:left;
+    width: 1232px;
     height: 400px;
     position: relative;
 }

@@ -96,6 +96,7 @@ function addModule(modId, modType, modInfo, modColour, gridId, top, left){
     var newModule = document.createElement("div");
     newModule.id = modId + "_" + top + "_" + left;
     newModule.className = modType + " module-node";
+    console.log(newModule.className);
     newModule.style.backgroundColor = modColour;
     newModule.innerHTML = modInfo;
     newModule.style.top = (top * offsetY).toString() + "px";

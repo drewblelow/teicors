@@ -89,19 +89,33 @@ function createCalendarRep(numDays, numHours){
     return arr;
 }
 
-function addModule(modId, modType, modInfo, modColour, gridId, top, left){
+function addModule(modId, modClass, modInfo, modColour, gridId, top, left){
     var parentGrid = document.getElementById(gridId);
     var offsetX = 80;
     var offsetY = 80;
     var newModule = document.createElement("div");
     newModule.id = modId + "_" + top + "_" + left;
-    newModule.className = modType + " module-node";
+    newModule.className = modClass + " module-node";
     newModule.style.backgroundColor = modColour;
     newModule.innerHTML = modInfo;
     newModule.style.top = (top * offsetY).toString() + "px";
     newModule.style.left = (left * offsetX).toString() + "px";
     parentGrid.appendChild(newModule);
     dragDrop.initElement(newModule);
+}
+
+function addNonDragModule(modId, modClass, modInfo, modColour, gridId, top, left){
+    var parentGrid = document.getElementById(gridId);
+    var offsetX = 80;
+    var offsetY = 80;
+    var newModule = document.createElement("div");
+    newModule.id = modId + "_" + top + "_" + left;
+    newModule.className = modClass + " module-node-nodrag";
+    newModule.style.backgroundColor = modColour;
+    newModule.innerHTML = modInfo;
+    newModule.style.top = (top * offsetY + 40).toString() + "px";
+    newModule.style.left = (left * offsetX).toString() + "px";
+    parentGrid.appendChild(newModule);
 }
 
 // drag drop

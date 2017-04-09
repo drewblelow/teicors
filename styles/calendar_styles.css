@@ -52,3 +52,9 @@ div.module-node{
     border-radius: 5px;
     position: absolute;
 }
+
+div.module-node-nodrag{
+    height: 40px;
+    width: 80px;
+    position: absolute;
+}

@@ -37,6 +37,11 @@
     font-family: Georgia;
 }
 
+.content-container-help {
+    color: blue;
+    text-decoration: none;
+}
+
 @media (max-width: 500px) {
 
     .content-container-namemat {

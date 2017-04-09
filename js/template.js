@@ -129,7 +129,7 @@ function renderFooter(parentId){
 
     var footerText = document.createElement("h2");
     footerText.className = "footer-text";
-    footerText.innerHTML = "The enhanced interface for CORS: an NUS project";
+    footerText.innerHTML = "The enhanced interactive CORS: an NUS project";
 
     parentDiv.appendChild(footerText);
 }

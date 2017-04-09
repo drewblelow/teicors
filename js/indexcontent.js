@@ -58,7 +58,8 @@ function renderContent(parentId) {
     parentDiv.appendChild(personaldataDiv);
     
     // Help 
-    var helpDiv = document.createElement("P");
+    var helpDiv = document.createElement("a");
+    helpDiv.href = "../docs/help.html";
     helpDiv.className = "content-container-help";
     
     var helpText = document.createTextNode("Note: Need help with the new interface? Click here for the user guide!");

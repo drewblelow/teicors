@@ -26,7 +26,7 @@ function createRankItem(id, colour, innerContent, parentDiv){
     tutorialRankItem.style.backgroundColor = colour;
     parentDiv.appendChild(tutorialRankItem);
     tutorialOrder.push(tutorialRankItem);
-    dragDrop.initElement(tutorialRankItem);
+    dragDropTut.initElement(tutorialRankItem);
     return tutorialRankItem;
 }
 
@@ -55,7 +55,7 @@ function removeEventSimple(obj,evt,fn) {
         obj.detachEvent('on'+evt,fn);
 }
 
-dragDrop = {
+dragDropTut = {
 	keyHTML: '<a href="#" class="keyLink"></a>',
 	keySpeed: 10, // pixels per keypress event
 	initialMouseX: undefined,
@@ -68,43 +68,43 @@ dragDrop = {
 	initElement: function (element) {
 		if (typeof element == 'string')
 			element = document.getElementById(element);
-		element.onmousedown = dragDrop.startDragMouse;
-		element.innerHTML += dragDrop.keyHTML;
+		element.onmousedown = dragDropTut.startDragMouse;
+		element.innerHTML += dragDropTut.keyHTML;
 		var links = element.getElementsByTagName('a');
 		var lastLink = links[links.length-1];
 		lastLink.relatedElement = element;
-		lastLink.onclick = dragDrop.startDragKeys;
+		lastLink.onclick = dragDropTut.startDragKeys;
 	},
 	startDragMouse: function (e) {
-		dragDrop.startDrag(this);
+		dragDropTut.startDrag(this);
 		var evt = e || window.event;
-		dragDrop.initialMouseX = evt.clientX;
-		dragDrop.initialMouseY = evt.clientY;
-		addEventSimple(document,'mousemove',dragDrop.dragMouse);
-		addEventSimple(document,'mouseup',dragDrop.releaseElement);
+		dragDropTut.initialMouseX = evt.clientX;
+		dragDropTut.initialMouseY = evt.clientY;
+		addEventSimple(document,'mousemove',dragDropTut.dragMouse);
+		addEventSimple(document,'mouseup',dragDropTut.releaseElement);
 		return false;
 	},
 	startDragKeys: function () {
-		dragDrop.startDrag(this.relatedElement);
-		dragDrop.dXKeys = dragDrop.dYKeys = 0;
-		addEventSimple(document,'keydown',dragDrop.dragKeys);
-		addEventSimple(document,'keypress',dragDrop.switchKeyEvents);
+		dragDropTut.startDrag(this.relatedElement);
+		dragDropTut.dXKeys = dragDrop.dYKeys = 0;
+		addEventSimple(document,'keydown',dragDropTut.dragKeys);
+		addEventSimple(document,'keypress',dragDropTut.switchKeyEvents);
 		this.blur();
 		return false;
 	},
 	startDrag: function (obj) {
-		if (dragDrop.draggedObject)
-			dragDrop.releaseElement();
-		dragDrop.startX = obj.offsetLeft;
-		dragDrop.startY = obj.offsetTop;
-		dragDrop.draggedObject = obj;
+		if (dragDropTut.draggedObject)
+			dragDropTut.releaseElement();
+		dragDropTut.startX = obj.offsetLeft;
+		dragDropTut.startY = obj.offsetTop;
+		dragDropTut.draggedObject = obj;
 		obj.className += ' dragged';
 	},
 	dragMouse: function (e) {
 		var evt = e || window.event;
-		var dX = evt.clientX - dragDrop.initialMouseX;
-		var dY = evt.clientY - dragDrop.initialMouseY;
-		dragDrop.setPosition(dX,dY);
+		var dX = evt.clientX - dragDropTut.initialMouseX;
+		var dY = evt.clientY - dragDropTut.initialMouseY;
+		dragDropTut.setPosition(dX,dY);
 		return false;
 	},
 	dragKeys: function(e) {
@@ -113,52 +113,52 @@ dragDrop = {
 		switch (key) {
 			case 37:	// left
 			case 63234:
-				dragDrop.dXKeys -= dragDrop.keySpeed;
+				dragDropTut.dXKeys -= dragDropTut.keySpeed;
 				break;
 			case 38:	// up
 			case 63232:
-				dragDrop.dYKeys -= dragDrop.keySpeed;
+				dragDropTut.dYKeys -= dragDropTut.keySpeed;
 				break;
 			case 39:	// right
 			case 63235:
-				dragDrop.dXKeys += dragDrop.keySpeed;
+				dragDropTut.dXKeys += dragDropTut.keySpeed;
 				break;
 			case 40:	// down
 			case 63233:
-				dragDrop.dYKeys += dragDrop.keySpeed;
+				dragDropTut.dYKeys += dragDropTut.keySpeed;
 				break;
 			case 13: 	// enter
 			case 27: 	// escape
-				dragDrop.releaseElement();
+				dragDropTut.releaseElement();
 				return false;
 			default:
 				return true;
 		}
-		dragDrop.setPosition(dragDrop.dXKeys,dragDrop.dYKeys);
+		dragDropTut.setPosition(dragDropTut.dXKeys,dragDropTut.dYKeys);
 		if (evt.preventDefault)
 			evt.preventDefault();
 		return false;
 	},
 	setPosition: function (dx,dy) {
-		dragDrop.draggedObject.style.left = dragDrop.startX + dx + 'px';
-		dragDrop.draggedObject.style.top = dragDrop.startY + dy + 'px';
+		dragDropTut.draggedObject.style.left = dragDropTut.startX + dx + 'px';
+		dragDropTut.draggedObject.style.top = dragDropTut.startY + dy + 'px';
 	},
 	switchKeyEvents: function () {
 		// for Opera and Safari 1.3
-		removeEventSimple(document,'keydown',dragDrop.dragKeys);
-		removeEventSimple(document,'keypress',dragDrop.switchKeyEvents);
-		addEventSimple(document,'keypress',dragDrop.dragKeys);
+		removeEventSimple(document,'keydown',dragDropTut.dragKeys);
+		removeEventSimple(document,'keypress',dragDropTut.switchKeyEvents);
+		addEventSimple(document,'keypress',dragDropTut.dragKeys);
 	},
 	releaseElement: function() {
-		removeEventSimple(document,'mousemove',dragDrop.dragMouse);
-		removeEventSimple(document,'mouseup',dragDrop.releaseElement);
-		removeEventSimple(document,'keypress',dragDrop.dragKeys);
-		removeEventSimple(document,'keypress',dragDrop.switchKeyEvents);
-		removeEventSimple(document,'keydown',dragDrop.dragKeys);
-		dragDrop.draggedObject.className = dragDrop.draggedObject.className.replace(/dragged/,'');
-        var item = document.getElementById(dragDrop.draggedObject.id);
+		removeEventSimple(document,'mousemove',dragDropTut.dragMouse);
+		removeEventSimple(document,'mouseup',dragDropTut.releaseElement);
+		removeEventSimple(document,'keypress',dragDropTut.dragKeys);
+		removeEventSimple(document,'keypress',dragDropTut.switchKeyEvents);
+		removeEventSimple(document,'keydown',dragDropTut.dragKeys);
+		dragDropTut.draggedObject.className = dragDropTut.draggedObject.className.replace(/dragged/,'');
+        var item = document.getElementById(dragDropTut.draggedObject.id);
         hotswap(item);
-        dragDrop.draggedObject = null;
+        dragDropTut.draggedObject = null;
 	}
 }
 

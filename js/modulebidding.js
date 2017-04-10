@@ -224,7 +224,9 @@ function renderContent(parentId) {
             alert("Insufficient bid points!\nYour bid: " + module_3240_mybid_field.value + "\nAvailable points: " + paccount);
         } else if (isNaN(module_3240_mybid_field.value)) {
             alert("Enter a valid bid point amount (i.e. > 0)");
-        } else {
+        } else if (module_3240_mybid_field.value < 0) {
+            alert("Invalid bid!");
+        }else {
             alert("Bid successful!");
             document.getElementById("modulebidding-points").innerHTML = "";
             renderPoints("modulebidding-points", (paccount - module_3240_mybid_field.value), gaccount);

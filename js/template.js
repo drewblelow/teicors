@@ -16,19 +16,19 @@ function renderTopNav(parentId){
     navbarDiv.className = "navbar-link-container";
 
     var homeLink = document.createElement("a");
-    homeLink.href = "/index.html";
+    homeLink.href = "./index.html";
     homeLink.text = "Home";
     homeLink.className = "navbar-links";
     navbarDiv.appendChild(homeLink);
 
     var manageModuleLink = document.createElement("a");
-    manageModuleLink.href = "/modulemanagement.html";
+    manageModuleLink.href = "./modulemanagement.html";
     manageModuleLink.text = "Manage Modules";
     manageModuleLink.className = "navbar-links";
     navbarDiv.appendChild(manageModuleLink);
 
     var moduleBiddingLink = document.createElement("a");
-    moduleBiddingLink.href = "/modulebidding.html";
+    moduleBiddingLink.href = "./modulebidding.html";
     moduleBiddingLink.text = "Module Bidding";
     moduleBiddingLink.className = "navbar-links";
     navbarDiv.appendChild(moduleBiddingLink);
@@ -40,7 +40,7 @@ function renderTopNav(parentId){
     navbarDiv.appendChild(nusBidPointsLink);
 
     var tutRegLink = document.createElement("a");
-    tutRegLink.href = "/tutorialregistration.html";
+    tutRegLink.href = "./tutorialregistration.html";
     tutRegLink.text = "Tutorial Registration";
     tutRegLink.className = "navbar-links";
     navbarDiv.appendChild(tutRegLink);
@@ -63,19 +63,19 @@ function renderTopNav(parentId){
     menuLinks.className = "listlinks";
 
     var homeLinkB = document.createElement("a");
-    homeLinkB.href = "/index.html";
+    homeLinkB.href = "./index.html";
     homeLinkB.text = "Home";
     homeLinkB.className = "navbar-button-links";
     menuLinks.appendChild(homeLinkB);
 
     var manageModuleLinkB = document.createElement("a");
-    manageModuleLinkB.href = "/modulemanagement.html";
+    manageModuleLinkB.href = "./modulemanagement.html";
     manageModuleLinkB.text = "Manage Modules";
     manageModuleLinkB.className = "navbar-button-links";
     menuLinks.appendChild(manageModuleLinkB);
 
     var moduleBiddingLinkB = document.createElement("a");
-    moduleBiddingLinkB.href = "/modulebidding.html";
+    moduleBiddingLinkB.href = "./modulebidding.html";
     moduleBiddingLinkB.text = "Module Bidding";
     moduleBiddingLinkB.className = "navbar-button-links";
     menuLinks.appendChild(moduleBiddingLinkB);
@@ -87,7 +87,7 @@ function renderTopNav(parentId){
     menuLinks.appendChild(nusBidPointsLinkB);
 
     var tutRegLinkB = document.createElement("a");
-    tutRegLinkB.href = "/tutorialregistration.html";
+    tutRegLinkB.href = "./tutorialregistration.html";
     tutRegLinkB.text = "Tutorial Registration";
     tutRegLinkB.className = "navbar-button-links";
     menuLinks.appendChild(tutRegLinkB);

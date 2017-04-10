@@ -8,7 +8,7 @@ function renderTopNav(parentId){
     var logoDiv = document.createElement("span");
     logoDiv.className = "navbar-logo-container";
     var logoImage = document.createElement('img');
-    logoImage.src = "../assets/img/partylion.png";
+    logoImage.src = "../assets/img/NUS_bootleg_logo_with_hat.png";
     logoImage.className = "navbar-logo-pic";
     logoDiv.appendChild(logoImage);
 

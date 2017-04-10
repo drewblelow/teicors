@@ -53,3 +53,8 @@ tr.dragdrop_table_row{
     position: absolute;
     top: 0;
 }
+
+#submit {
+    margin-top: 20px;
+    margin-left: 5%;
+}

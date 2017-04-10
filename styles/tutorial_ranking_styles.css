@@ -38,5 +38,18 @@ th.checkbox_col{
 }
 
 tr.dragdrop_table_row{
-    height: 50px;
+    height: 49px;
+}
+
+.class_col{
+    width: 150px;
+}
+
+#dragdrop-container{
+    position: relative;
+}
+
+#tutorial-dragdrop-container{
+    position: absolute;
+    top: 0;
 }

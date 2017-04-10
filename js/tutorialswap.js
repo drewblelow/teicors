@@ -6,16 +6,6 @@ function renderTutorialRanking(parentId){
     parentDiv.className = "tutorial-rank-container";
     parentDiv.innerHTML = "&nbsp";
     // 200x700 for now, can do dynamic after base functionality implemented
-
-    var cs3240lab1 = createRankItem("cs3240lab1", "green", "CS3240 LAB01<br>AS6 4-21", parentDiv);
-    var cs3240lab2 = createRankItem("cs3240lab2", "green", "CS3240 LAB02<br>AS6 4-21", parentDiv);
-    var cs3240lab3 = createRankItem("cs3240lab3", "green", "CS3240 LAB03<br>AS6 4-21", parentDiv);
-    var nm2213tut1 = createRankItem("nm2213tut1", "yellow", "NM2213 TUT01<br>COM2 2-15", parentDiv);
-    var nm2213tut2 = createRankItem("nm2213tut2", "yellow", "NM2213 TUT02<br>COM2 2-16", parentDiv);
-    var nm2213tut3 = createRankItem("nm2213tut3", "yellow", "NM2213 TUT03<br>COM2 2-15", parentDiv);
-    var nm2213tut4 = createRankItem("nm2213tut4", "yellow", "NM2213 TUT04<br>COM2 2-16", parentDiv);
-
-    assignOffsets();
 }
 
 function createRankItem(id, colour, innerContent, parentDiv){

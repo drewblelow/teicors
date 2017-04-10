@@ -46,9 +46,11 @@
 .tablelabel {
     font-family: sans-serif;
     font-size: 35px;
+    margin-left: 5%;
+    margin-bottom: 5px;
 }
 
-th, td { 
+th, td {
     vertical-align: middle;
     text-align: center;
 }
@@ -84,7 +86,7 @@ tr + tr { border: 1px solid; }
 @media (max-width: 500px) {
     .content-particulars {
         font-size: 15px;
-    }    
+    }
     .currentbidpoints {
         font-size: 17.5px;
     }
@@ -96,22 +98,22 @@ tr + tr { border: 1px solid; }
     .generalbidpoints {
         font-size: 20px;
     }
-    
+
     .hidetimetablebutton {
         font-size: 15px;
         margin-left: 0%;
         align-content: center;
         margin: auto;
     }
-    
+
     #dragdrop-calendar-container {
         display: none;
     }
-    
+
     .input_field {
         max-width: 115px;
     }
-    
+
     .tablelabel {
         font-size: 20px;
     }

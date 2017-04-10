@@ -1,8 +1,7 @@
 div.tutorial-rank-container{
     position: relative;
     width: 150px;
-    height: 352px;
-    border: 1px solid;
+    height: 350px;
 }
 
 div.rank-item{
@@ -27,22 +26,25 @@ table.ranking_dragdrop, table.available_slots, tr, td, th{
 
 th.class_code_col{
     width: 30%;
+    text-align: left;
 }
 
 th.location_col{
     width: 65%;
+    text-align: left;
 }
 
 th.checkbox_col{
     width: 15%;
+    text-align: left;
 }
 
 tr.dragdrop_table_row{
     height: 49px;
 }
 
-.class_col{
-    width: 150px;
+.table_content{
+    text-align: left;
 }
 
 #dragdrop-container{

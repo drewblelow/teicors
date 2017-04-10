@@ -13,3 +13,30 @@ div.rank-item{
     border: 1px solid;
     clear: both;
 }
+
+h3.module_header{
+    margin-left: 5%;
+    padding-bottom: 10px;
+    text-align: left;
+}
+
+table.ranking_dragdrop, table.available_slots, tr, td, th{
+    margin-left: 5%;
+    border: 1px solid black;
+}
+
+th.class_code_col{
+    width: 30%;
+}
+
+th.location_col{
+    width: 65%;
+}
+
+th.checkbox_col{
+    width: 15%;
+}
+
+tr.dragdrop_table_row{
+    height: 50px;
+}

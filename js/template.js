@@ -8,7 +8,7 @@ function renderTopNav(parentId){
     var logoDiv = document.createElement("span");
     logoDiv.className = "navbar-logo-container";
     var logoImage = document.createElement('img');
-    logoImage.src = "../assets/img/NUS_bootleg_logo_with_hat.png";
+    logoImage.src = "./assets/img/NUS_bootleg_logo_with_hat.png";
     logoImage.className = "navbar-logo-pic";
     logoDiv.appendChild(logoImage);
 
@@ -16,19 +16,19 @@ function renderTopNav(parentId){
     navbarDiv.className = "navbar-link-container";
 
     var homeLink = document.createElement("a");
-    homeLink.href = "../docs/index.html";
+    homeLink.href = "/index.html";
     homeLink.text = "Home";
     homeLink.className = "navbar-links";
     navbarDiv.appendChild(homeLink);
 
     var manageModuleLink = document.createElement("a");
-    manageModuleLink.href = "../docs/modulemanagement.html";
+    manageModuleLink.href = "/modulemanagement.html";
     manageModuleLink.text = "Manage Modules";
     manageModuleLink.className = "navbar-links";
     navbarDiv.appendChild(manageModuleLink);
 
     var moduleBiddingLink = document.createElement("a");
-    moduleBiddingLink.href = "../docs/modulebidding.html";
+    moduleBiddingLink.href = "/modulebidding.html";
     moduleBiddingLink.text = "Module Bidding";
     moduleBiddingLink.className = "navbar-links";
     navbarDiv.appendChild(moduleBiddingLink);
@@ -40,7 +40,7 @@ function renderTopNav(parentId){
     navbarDiv.appendChild(nusBidPointsLink);
 
     var tutRegLink = document.createElement("a");
-    tutRegLink.href = "../docs/tutorialregistration.html";
+    tutRegLink.href = "/tutorialregistration.html";
     tutRegLink.text = "Tutorial Registration";
     tutRegLink.className = "navbar-links";
     navbarDiv.appendChild(tutRegLink);
@@ -63,19 +63,19 @@ function renderTopNav(parentId){
     menuLinks.className = "listlinks";
 
     var homeLinkB = document.createElement("a");
-    homeLinkB.href = "../docs/index.html";
+    homeLinkB.href = "/index.html";
     homeLinkB.text = "Home";
     homeLinkB.className = "navbar-button-links";
     menuLinks.appendChild(homeLinkB);
 
     var manageModuleLinkB = document.createElement("a");
-    manageModuleLinkB.href = "../docs/modulemanagement.html";
+    manageModuleLinkB.href = "/modulemanagement.html";
     manageModuleLinkB.text = "Manage Modules";
     manageModuleLinkB.className = "navbar-button-links";
     menuLinks.appendChild(manageModuleLinkB);
 
     var moduleBiddingLinkB = document.createElement("a");
-    moduleBiddingLinkB.href = "../docs/modulebidding.html";
+    moduleBiddingLinkB.href = "/modulebidding.html";
     moduleBiddingLinkB.text = "Module Bidding";
     moduleBiddingLinkB.className = "navbar-button-links";
     menuLinks.appendChild(moduleBiddingLinkB);
@@ -87,7 +87,7 @@ function renderTopNav(parentId){
     menuLinks.appendChild(nusBidPointsLinkB);
 
     var tutRegLinkB = document.createElement("a");
-    tutRegLinkB.href = "../docs/tutorialregistration.html";
+    tutRegLinkB.href = "/tutorialregistration.html";
     tutRegLinkB.text = "Tutorial Registration";
     tutRegLinkB.className = "navbar-button-links";
     menuLinks.appendChild(tutRegLinkB);

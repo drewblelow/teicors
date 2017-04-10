@@ -49,6 +49,7 @@ tr.dragdrop_table_row{
 
 #dragdrop-container{
     position: relative;
+    width: 150px;
 }
 
 #tutorial-dragdrop-container{

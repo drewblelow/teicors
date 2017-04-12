@@ -77,6 +77,29 @@ function renderCalendar(parentId, gridId){
 
 }
 
+function toggleCalendarButton(parentId, calendarId){
+    var parentDiv = document.getElementById(parentId);
+    // Hide/show timetable
+    var hidetimetableDiv = document.createElement("div");
+    hidetimetableDiv.id = "timetablebutton-container";
+    var hidetimetablebutton = document.createElement("BUTTON");
+    hidetimetablebutton.className = "hidetimetablebutton";
+    hidetimetablebutton.style.margin = "20px 0px 20px 5%";
+
+    var text = document.createTextNode("Show/Hide Calendar");
+    hidetimetablebutton.appendChild(text);
+    hidetimetablebutton.onclick = function () {
+        if(document.getElementById(calendarId).style.display === 'none') {
+            document.getElementById(calendarId).style.display = 'block';
+        }
+        else {
+            document.getElementById(calendarId).style.display = 'none';
+        }
+    };
+    hidetimetableDiv.appendChild(hidetimetablebutton);
+    parentDiv.appendChild(hidetimetableDiv);
+}
+
 function createCalendarRep(numDays, numHours){
     var arr = [];
     for (var i=0; i<numDays; i++){

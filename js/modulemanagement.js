@@ -286,16 +286,16 @@ function renderContent(parentId) {
         temp.className = "addedmodule";
         temp.text = searchbar.value;
         if(searchbar.value == "CS3240 : Interaction Design") {
-            addModule("module1", "module-1", "CS3240<br>LEC 1", "blue", "calendar", 4, 4);
-            addModule("module1", "module-1", "CS3240<br>LAB 1", "blue", "calendar", 1, 6);
+            addModule("module1", "module-1", "CS3240<br>LEC 1", "#88b0ef", "calendar", 4, 4);
+            addModule("module1", "module-1", "CS3240<br>LAB 1", "#88b0ef", "calendar", 1, 6);
             module_3240.style.display = "";
         } else if(searchbar.value == "LSM1301 : General Biology") {
-            addModule("module2", "module-2", "LSM1301<br>LEC 1", "yellow", "calendar", 2, 5);
-            addModule("module2", "module-2", "LSM1301<br>LAB 1", "yellow", "calendar", 2, 7);
+            addModule("module2", "module-2", "LSM1301<br>LEC 1", "#ff9baf", "calendar", 2, 5);
+            addModule("module2", "module-2", "LSM1301<br>LAB 1", "#ff9baf", "calendar", 2, 7);
             module_1301.style.display = "";
         } else if (searchbar.value == "NM2213 : Introduction to Human-Computer Interaction Design") {
-            addModule("module3", "module-3", "NM2213<br>T01", "red", "calendar", 0, 2);
-            addModule("module3", "module-3", "NM2213<br>LEC", "red", "calendar", 4,3);
+            addModule("module3", "module-3", "NM2213<br>T01", "#fcffaa", "calendar", 0, 2);
+            addModule("module3", "module-3", "NM2213<br>LEC", "#fcffaa", "calendar", 4,3);
             module_2213.style.display = "";
         }
     }
